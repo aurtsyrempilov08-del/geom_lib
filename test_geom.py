@@ -28,5 +28,16 @@ class RectangleTestCase(unittest.TestCase):
     def test_area_zero(self):
         self.assertEqual(rectangle.area(10, 0), 0)
 
+class SquareTestCase(unittest.TestCase):
+    def test_area_positive(self):
+        self.assertEqual(square.area(7), 49)
+
+    def test_perimeter_zero(self):
+        self.assertEqual(square.perimeter(0), 0)
+
+    def test_perimeter_invalid_type(self):
+        with self.assertRaises(TypeError):
+            square.perimeter("5")
+
 if __name__ == "__main__":
     unittest.main()
