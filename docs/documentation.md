@@ -3,11 +3,12 @@
 ## Общее описание
 Здесь представлена библиотека на Python для рассчета площади и периметра геометрических фигур.
 
-В проекте есть 4 файла:
+В проекте есть 5 файлов:
 - circle.py - круг
 - square.py - квадрат
 - rectangle.py - прямоугольник
 - triangle.py - треугольник
+- test_geom.py - модульные unit-тесты
 
 ## Описание функций и примеры вызова
 
@@ -47,10 +48,18 @@ triangle.area(4, 5) вернет 10.0
 Пример:
 triangle.perimeter(3, 4, 5) вернет 12
 
+### 5. test_geom.py
+Содержит классы unit-тестов (`CircleTestCase`, `RectangleTestCase`, `SquareTestCase`, `TriangleTestCase`) для проверки расчёта площади и периметра фигур, а также обработки некорректных входных данных.
+Пример запуска: `python -m unittest test_geom.py`
+
 ## История коммитов
 
 | Хеш | Название коммита | Что сделано |
 | --- | --- | --- |
+| 2af8728 | Add unit tests for triangle module | добавил unit-тесты для модуля triangle.py |
+| c2fcd11 | Add unit tests for square module | добавил unit-тесты для модуля square.py |
+| 1fb5b98 | Add unit tests for rectangle module | добавил unit-тесты для модуля rectangle.py |
+| e3388db | Add unit tests for circle module | добавил unit-тесты для модуля circle.py |
 | 0b86d41 | documents triangle.py | добавил описание функций в triangle.py |
 | 9fc9fdd | documents rectangle.py | добавил описание функций в rectangle.py |
 | 53543ee | documents square.py | добавил описание функций в square.py |
