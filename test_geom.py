@@ -38,6 +38,17 @@ class SquareTestCase(unittest.TestCase):
     def test_perimeter_invalid_type(self):
         with self.assertRaises(TypeError):
             square.perimeter("5")
+            
+class TriangleTestCase(unittest.TestCase):
+    def test_area_positive(self):
+        self.assertEqual(triangle.area(10, 5), 25.0)
+
+    def test_perimeter_positive(self):
+        self.assertEqual(triangle.perimeter(3, 4, 5), 12)
+
+    def test_perimeter_nonexistent(self):
+        with self.assertRaises(ValueError):
+            triangle.perimeter(1, 2, 10)
 
 if __name__ == "__main__":
     unittest.main()
