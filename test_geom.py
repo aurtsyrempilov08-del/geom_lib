@@ -18,6 +18,15 @@ class CircleTestCase(unittest.TestCase):
         with self.assertRaises(ValueError):
             circle.area(-3)
 
+class RectangleTestCase(unittest.TestCase):
+    def test_area_positive(self):
+        self.assertEqual(rectangle.area(4, 6), 24)
+
+    def test_perimeter_float(self):
+        self.assertEqual(rectangle.perimeter(2.5, 3.5), 12.0)
+
+    def test_area_zero(self):
+        self.assertEqual(rectangle.area(10, 0), 0)
 
 if __name__ == "__main__":
     unittest.main()
